@@ -16,9 +16,9 @@ Output: [[3],[9,20],[15,7]] */
  */
  var levelOrder = function (root) {
     if (!root) return [];
-    const items = []; // 存放所有节点
-    const queue = [root, null]; // null 简化操作
-    let levelNodes = []; // 存放每一层的节点
+    const items = []; 
+    const queue = [root, null]; 
+    let levelNodes = []; 
   
     while (queue.length > 0) {
       const t = queue.shift();
@@ -32,7 +32,6 @@ Output: [[3],[9,20],[15,7]] */
           queue.push(t.right);
         }
       } else {
-        // 一层已经遍历完了
         items.push(levelNodes);
         levelNodes = [];
         if (queue.length > 0) {
